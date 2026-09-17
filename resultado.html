@@ -3,25 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Resultado</title>
-   <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="icon" href="{{ url_for('favicon') }}">
+</head>
 <body>
     <h1>Resultado</h1>
-    <p id="resultado"></p>
+    <p>O resultado da sua conta é: {{ resultado }}</p>
+
     <a href="/calculadora">
-        
-        <button>Nova conta</button>
-    </a>
+        <button>Nova conta</button></a>
+
     <a href="/">
+        <button>Voltar para o início</button></a>
 
-        <button>Voltar para o início</button>
-    </a>
-    <script>
-
-        let resultado = localStorage.getItem("resultado");
-        document.getElementById("resultado").innerText = resultado;
-
-    </script>
 </body>
 </html>
-
-
