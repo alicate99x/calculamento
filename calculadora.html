@@ -2,23 +2,18 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Calculadora</title>
+    <title>Resultado</title>
     <link rel="icon" href="{{ url_for('favicon') }}">
 </head>
 <body>
-    <h1>Calculadora</h1>
-    <form action="/calcular" method="POST">
-        <input name="numero1" type="number" step="any" placeholder="Primeiro número" required>
-        <select name="operacao">
+    <h1>Resultado</h1>
+    <p>O resultado da sua conta é: {{ resultado }}</p>
 
-            <option value="soma">+</option>
-            <option value="subtracao">-</option>
-            <option value="multiplicacao">*</option>
-            <option value="divisao">/</option>
-            
-        </select>
-        <input name="numero2" type="number" step="any" placeholder="Segundo número" required>
-        <button type="submit">Resultado</button>
-    </form>
+    <a href="/calculadora">
+        <button>Nova conta</button></a>
+
+    <a href="/">
+        <button>Voltar para o início</button></a>
+
 </body>
 </html>
